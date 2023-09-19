@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimpleCRUDwebAPI.DAL;
 using SimpleCRUDwebAPI.Models;
@@ -9,6 +10,10 @@ namespace SimpleCRUDwebAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        //private readonly ILogger<ProductController> logger;
+
+        private static readonly ILog log = LogManager.GetLogger(typeof(ProductController));
+
         private readonly MyAppDbContext _appDbContext;
 
         public ProductController(MyAppDbContext appDbContext)
@@ -18,19 +23,29 @@ namespace SimpleCRUDwebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            log.Error("Get Method");
+            DateTime startTime = DateTime.Now;
+
             try
             {
                 var products = _appDbContext.Products.ToList();
+
                 if (products.Count == 0)
                 {
                     return NotFound("Products not available.");
                 }
                 return Ok(products);
+                DateTime endTime = DateTime.Now;
+                TimeSpan duration = endTime - startTime;
+                log.Info($"get Method. Duration: {duration.TotalMilliseconds} ms. Status: Success");
 
             }
             catch (Exception ex )
             {
-
+                log.Error("Error in YourMethod", ex);
+                DateTime endTime = DateTime.Now;
+                TimeSpan duration = endTime - startTime;
+                log.Error($"Get Method with Error. Duration: {duration.TotalMilliseconds} ms. Status: Error");
                 return BadRequest(ex.Message);
             }    
         }
