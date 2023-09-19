@@ -23,8 +23,8 @@ namespace SimpleCRUDwebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            log.Error("Get Method");
-            DateTime startTime = DateTime.Now;
+            log.Info("Get Method");
+            DateTime StartTime = DateTime.Now;
 
             try
             {
@@ -35,16 +35,17 @@ namespace SimpleCRUDwebAPI.Controllers
                     return NotFound("Products not available.");
                 }
                 return Ok(products);
-                DateTime endTime = DateTime.Now;
-                TimeSpan duration = endTime - startTime;
+                DateTime EndTime = DateTime.Now;
+                TimeSpan duration = EndTime - StartTime;
                 log.Info($"get Method. Duration: {duration.TotalMilliseconds} ms. Status: Success");
 
             }
             catch (Exception ex )
             {
+              
                 log.Error("Error in YourMethod", ex);
-                DateTime endTime = DateTime.Now;
-                TimeSpan duration = endTime - startTime;
+                DateTime EndTime = DateTime.Now;
+                TimeSpan duration = EndTime - StartTime;
                 log.Error($"Get Method with Error. Duration: {duration.TotalMilliseconds} ms. Status: Error");
                 return BadRequest(ex.Message);
             }    
