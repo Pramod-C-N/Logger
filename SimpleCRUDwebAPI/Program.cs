@@ -3,8 +3,10 @@ using SimpleCRUDwebAPI.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//log4net Registration added
+builder.Logging.AddLog4Net();
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
