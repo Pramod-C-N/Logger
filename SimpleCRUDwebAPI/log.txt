@@ -1,1 +1,106 @@
-﻿
+﻿2023-09-20 11:54:51,445 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 11:54:51,515 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 11:54:51,520 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 11:54:51,524 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 11:54:51,524 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 11:54:56,983 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-20 11:54:56,993 [.NET ThreadPool Worker] DEBUG SimpleCRUDwebAPI.Controllers.ProductController - This is a debug message.
+2023-09-20 11:54:56,995 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - This is an info message.
+2023-09-20 11:54:56,997 [.NET ThreadPool Worker] WARN  SimpleCRUDwebAPI.Controllers.ProductController - This is a warning message.
+2023-09-20 11:54:56,998 [.NET ThreadPool Worker] ERROR SimpleCRUDwebAPI.Controllers.ProductController - This is an error message.
+2023-09-20 11:54:57,000 [.NET ThreadPool Worker] FATAL SimpleCRUDwebAPI.Controllers.ProductController - This is a fatal message.
+2023-09-20 11:55:00,692 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-20 11:57:58,433 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 11:57:58,499 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 11:57:58,503 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 11:57:58,507 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 11:57:58,508 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 11:58:06,206 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-20 11:58:09,834 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-20 12:00:30,279 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:00:30,344 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:00:30,348 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:00:30,352 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:00:30,352 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:00:37,391 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-20 12:00:41,443 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-20 12:03:33,106 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:03:33,173 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:03:33,177 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:03:33,182 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:03:33,182 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:03:52,169 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 12:03:47, End Time: 20-09-2023 12:03:52, Status: Success
+2023-09-20 12:03:52,177 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 12:23:20,666 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:23:20,722 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:23:20,726 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:23:20,728 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:23:20,729 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:23:22,117 [.NET ThreadPool Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - SimpleCRUDwebAPI.Controllers.ProductController.LogMethodExecution (SimpleCRUDwebAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-20 12:23:56,255 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:23:56,307 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:23:56,310 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:23:56,313 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:23:56,313 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:23:57,651 [.NET ThreadPool Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - SimpleCRUDwebAPI.Controllers.ProductController.LogMethodExecution (SimpleCRUDwebAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-20 12:24:21,516 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:24:21,568 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:24:21,571 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:24:21,574 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:24:21,575 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:24:22,852 [.NET ThreadPool Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - SimpleCRUDwebAPI.Controllers.ProductController.LogMethodExecution (SimpleCRUDwebAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-20 12:26:08,918 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:26:08,986 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:26:08,989 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:26:08,992 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:26:08,993 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:26:09,885 [.NET ThreadPool Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - SimpleCRUDwebAPI.Controllers.ProductController.LogMethodExecution (SimpleCRUDwebAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-20 12:31:39,126 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:31:39,177 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:31:39,181 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:31:39,183 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:31:39,184 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:34:18,586 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 12:34:15, End Time: 20-09-2023 12:34:18, Status: Success
+2023-09-20 12:34:18,592 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 12:35:08,353 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 12:35:08, End Time: 20-09-2023 12:35:08, Status: Product details not found with id 7
+2023-09-20 12:35:08,354 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 12:46:45,091 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:46:45,156 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:46:45,161 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:46:45,165 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:46:45,165 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 12:46:58,315 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 12:46:58, End Time: 20-09-2023 12:46:58, Status: Error: Entity type 'Product' is defined with a single key property, but 0 values were passed to the 'Find' method.
+2023-09-20 12:46:58,323 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 12:47:45,645 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 12:47:45,713 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 12:47:45,720 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 12:47:45,725 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 12:47:45,726 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
