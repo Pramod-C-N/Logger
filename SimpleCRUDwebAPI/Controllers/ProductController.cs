@@ -12,14 +12,20 @@ namespace SimpleCRUDwebAPI.Controllers
     {
         //private readonly ILogger<ProductController> logger;
 
-        private  readonly ILog logger;
+        // Declare a private field for the log4net logger.
+        private readonly ILog logger;
 
+        // Declare a private field for the application's database context.
         private readonly MyAppDbContext _appDbContext;
 
+        
         public ProductController(MyAppDbContext appDbContext)
         {
+            // Assign the provided database context to the private field.
             _appDbContext = appDbContext;
-            logger = LogManager.GetLogger(typeof(ProductController));
+
+            // Initialize the logger for the ProductController.
+            logger = log4net.LogManager.GetLogger(typeof(ProductController));
         }
 
         private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
@@ -28,13 +34,27 @@ namespace SimpleCRUDwebAPI.Controllers
             logger.Info(logMessage);
 
             // insert this log message into the database using log4net
-            ThreadContext.Properties["MethodName"] = methodName;
-            ThreadContext.Properties["StartTime"] = startTime;
-            ThreadContext.Properties["EndTime"] = endTime;
-            ThreadContext.Properties["Status"] = status;
+            GlobalContext.Properties["MethodName"] = methodName;
+            GlobalContext.Properties["StarTime"] = startTime;
+            GlobalContext.Properties["EndTime"] = endTime;
+            GlobalContext.Properties["Status"] = status;
             logger.Info("Log this message in the database");
         }
 
+        //private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
+        //{
+        //    // Set MDC properties for method-specific data
+        //    MDC.Set("MethodName", methodName);
+        //    MDC.Set("StarTime", startTime.ToString());
+        //    MDC.Set("EndTime", endTime.ToString());
+        //    MDC.Set("Status", status);
+
+        //    var logMessage = $"Method: {methodName}, Start Time: {startTime}, End Time: {endTime}, Status: {status}";
+        //    logger.Info(logMessage);
+
+
+        //    logger.Info("Log this message in the database");
+        //}
 
 
 
