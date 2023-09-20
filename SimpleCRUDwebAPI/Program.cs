@@ -4,7 +4,7 @@ using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Enable internal debugging for log4net (add this line)
+// Enable internal debugging for log4net 
 log4net.Util.LogLog.InternalDebugging = true;
 
 
