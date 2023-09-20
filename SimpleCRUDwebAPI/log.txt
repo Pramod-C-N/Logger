@@ -104,3 +104,119 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP meth
 2023-09-20 12:47:45,720 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
 2023-09-20 12:47:45,725 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
 2023-09-20 12:47:45,726 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:23:54,437 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 13:23:54,510 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 13:23:54,518 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 13:23:54,523 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 13:23:54,524 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:24:09,001 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 13:24:03, End Time: 20-09-2023 13:24:08, Status: Success
+2023-09-20 13:24:09,010 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 13:27:18,399 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 13:27:18,463 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 13:27:18,468 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 13:27:18,472 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 13:27:18,473 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:27:33,039 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 13:27:26, End Time: 20-09-2023 13:27:33, Status: Success
+2023-09-20 13:27:33,049 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 13:29:10,969 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 13:29:11,035 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 13:29:11,040 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 13:29:11,045 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 13:29:11,046 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:30:01,375 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 13:29:56, End Time: 20-09-2023 13:30:01, Status: Success
+2023-09-20 13:30:01,385 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 13:33:30,644 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 13:33:30,726 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 13:33:30,731 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 13:33:30,734 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 13:33:30,734 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:33:45,698 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 13:33:41, End Time: 20-09-2023 13:33:45, Status: Success
+2023-09-20 13:33:45,714 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 13:38:54,610 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 13:38:54,695 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 13:38:54,701 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 13:38:54,704 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 13:38:54,705 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 13:39:08,191 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 13:39:03, End Time: 20-09-2023 13:39:08, Status: Success
+2023-09-20 13:39:08,201 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 14:43:56,560 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 14:43:56,616 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 14:43:56,620 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 14:43:56,622 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 14:43:56,623 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:05:12,769 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 15:05:12,834 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 15:05:12,837 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 15:05:12,840 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 15:05:12,841 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:05:24,186 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:05:21, End Time: 20-09-2023 15:05:24, Status: Success
+2023-09-20 15:06:11,736 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 15:17:33,590 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 15:17:33,652 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 15:17:33,655 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 15:17:33,658 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 15:17:33,659 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:17:44,733 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:17:42, End Time: 20-09-2023 15:17:44, Status: Success
+2023-09-20 15:17:44,737 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 15:22:38,380 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:22:38, End Time: 20-09-2023 15:22:38, Status: Success
+2023-09-20 15:22:38,381 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 15:32:53,677 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 15:32:53,741 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 15:32:53,745 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 15:32:53,748 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 15:32:53,749 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:33:09,974 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:33:03, End Time: 20-09-2023 15:33:09, Status: Success
+2023-09-20 15:33:09,981 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 15:39:49,048 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 15:39:49,140 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 15:39:49,149 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 15:39:49,155 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 15:39:49,156 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:40:05,553 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:39:58, End Time: 20-09-2023 15:40:05, Status: Success
+2023-09-20 15:40:05,562 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 15:50:17,413 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 15:50:17,481 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 15:50:17,486 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 15:50:17,489 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 15:50:17,489 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 15:50:31,368 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 15:50:26, End Time: 20-09-2023 15:50:31, Status: Success
+2023-09-20 15:50:31,458 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 16:10:39,767 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 16:10:39,840 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 16:10:39,844 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 16:10:39,847 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 16:10:39,847 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 16:10:48,388 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 16:10:46, End Time: 20-09-2023 16:10:48, Status: Success
+2023-09-20 16:10:48,392 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 16:15:03,984 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 16:15:04,047 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 16:15:04,052 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 16:15:04,055 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 16:15:04,056 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 16:15:13,894 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 16:15:12, End Time: 20-09-2023 16:15:13, Status: Success
+2023-09-20 16:15:13,898 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 16:25:59,444 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 16:25:59,492 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 16:25:59,495 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 16:25:59,498 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 16:25:59,499 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 16:26:08,857 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 16:26:06, End Time: 20-09-2023 16:26:08, Status: Success
+2023-09-20 16:26:08,861 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 16:54:40,020 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 16:54:40,076 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 16:54:40,082 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 16:54:40,086 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 16:54:40,086 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\Admin\OneDrive - Abylle Solutions Pvt Ltd\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 16:54:53,727 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 16:54:51, End Time: 20-09-2023 16:54:53, Status: Product details not found with id 1
+2023-09-20 16:54:53,735 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 16:55:41,698 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-20 16:55:41,729 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-20 16:56:07,331 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 20-09-2023 16:56:07, End Time: 20-09-2023 16:56:07, Status: Success
+2023-09-20 16:56:07,332 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-20 17:19:48,345 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7241
+2023-09-20 17:19:48,401 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5283
+2023-09-20 17:19:48,405 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-20 17:19:48,409 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-20 17:19:48,409 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\apps\SimpleCRUDwebAPI\SimpleCRUDwebAPI\
+2023-09-20 17:19:56,030 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-20 17:19:57,541 [.NET ThreadPool Worker] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
