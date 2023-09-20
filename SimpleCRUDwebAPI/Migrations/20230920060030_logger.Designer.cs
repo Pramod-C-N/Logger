@@ -12,7 +12,7 @@ using SimpleCRUDwebAPI.DAL;
 namespace SimpleCRUDwebAPI.Migrations
 {
     [DbContext(typeof(MyAppDbContext))]
-    [Migration("20230919100737_logger")]
+    [Migration("20230920060030_logger")]
     partial class logger
     {
         /// <inheritdoc />
