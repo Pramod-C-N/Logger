@@ -12,19 +12,38 @@ namespace SimpleCRUDwebAPI.Controllers
     {
         //private readonly ILogger<ProductController> logger;
 
-        private static readonly ILog log = LogManager.GetLogger(typeof(ProductController));
+        private  readonly ILog logger;
 
         private readonly MyAppDbContext _appDbContext;
 
         public ProductController(MyAppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
+            logger = LogManager.GetLogger(typeof(ProductController));
         }
+
+        private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
+        {
+            var logMessage = $"Method: {methodName}, Start Time: {startTime}, End Time: {endTime}, Status: {status}";
+            logger.Info(logMessage);
+
+            // insert this log message into the database using log4net
+            ThreadContext.Properties["MethodName"] = methodName;
+            ThreadContext.Properties["StartTime"] = startTime;
+            ThreadContext.Properties["EndTime"] = endTime;
+            ThreadContext.Properties["Status"] = status;
+            logger.Info("Log this message in the database");
+        }
+
+
+
+
+
+
         [HttpGet]
         public IActionResult Get()
         {
-            log.Info("Get Method");
-            DateTime StartTime = DateTime.Now;
+            logger.Info("Get Method called");
 
             try
             {
@@ -32,21 +51,19 @@ namespace SimpleCRUDwebAPI.Controllers
 
                 if (products.Count == 0)
                 {
+                    logger.Warn("No products available.");
                     return NotFound("Products not available.");
                 }
+                logger.Info("Get Method successful.");
                 return Ok(products);
-                DateTime EndTime = DateTime.Now;
-                TimeSpan duration = EndTime - StartTime;
-                log.Info($"get Method. Duration: {duration.TotalMilliseconds} ms. Status: Success");
+
+                
 
             }
             catch (Exception ex )
             {
               
-                log.Error("Error in YourMethod", ex);
-                DateTime EndTime = DateTime.Now;
-                TimeSpan duration = EndTime - StartTime;
-                log.Error($"Get Method with Error. Duration: {duration.TotalMilliseconds} ms. Status: Error");
+                logger.Error("Error in YourMethod", ex);
                 return BadRequest(ex.Message);
             }    
         }
@@ -56,16 +73,21 @@ namespace SimpleCRUDwebAPI.Controllers
         {
             try
             {
+                var startTime = DateTime.Now;
                 var product = _appDbContext.Products.Find(id);
+                var endTime = DateTime.Now;
                 if (product == null)
                 {
+                    LogMethodExecution(nameof(Get), startTime, endTime, $"Product details not found with id {id}");
                     return NotFound($"Product details not fount with id {id}");
                 }
+                LogMethodExecution(nameof(Get), startTime, endTime, "Success");
                 return Ok(product);
+                
             }
             catch (Exception ex)
             {
-
+                LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest(ex.Message);
             }
         }
