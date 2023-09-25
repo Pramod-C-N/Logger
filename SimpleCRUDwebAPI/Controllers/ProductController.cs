@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimpleCRUDwebAPI.DAL;
 using SimpleCRUDwebAPI.Models;
+using System.Data.Common;
+
+[assembly:log4net.Config.XmlConfigurator(Watch = true)]
 
 namespace SimpleCRUDwebAPI.Controllers
 {
@@ -41,25 +44,6 @@ namespace SimpleCRUDwebAPI.Controllers
             logger.Info("Log this message in the database");
         }
 
-        //private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
-        //{
-        //    // Set MDC properties for method-specific data
-        //    MDC.Set("MethodName", methodName);
-        //    MDC.Set("StarTime", startTime.ToString());
-        //    MDC.Set("EndTime", endTime.ToString());
-        //    MDC.Set("Status", status);
-
-        //    var logMessage = $"Method: {methodName}, Start Time: {startTime}, End Time: {endTime}, Status: {status}";
-        //    logger.Info(logMessage);
-
-
-        //    logger.Info("Log this message in the database");
-        //}
-
-
-
-
-
         [HttpGet]
         public IActionResult Get()
         {
@@ -75,9 +59,7 @@ namespace SimpleCRUDwebAPI.Controllers
                     return NotFound("Products not available.");
                 }
                 logger.Info("Get Method successful.");
-                return Ok(products);
-
-                
+                return Ok(products);               
 
             }
             catch (Exception ex )
@@ -87,30 +69,41 @@ namespace SimpleCRUDwebAPI.Controllers
                 return BadRequest(ex.Message);
             }    
         }
+
+
         [HttpGet("{id}")]
-       
-        public IActionResult  Get(int id)
+        public IActionResult Get(int id)
         {
             try
             {
+                logger.Info($"This is the Get method for ID: {id}");
                 var startTime = DateTime.Now;
                 var product = _appDbContext.Products.Find(id);
                 var endTime = DateTime.Now;
+
                 if (product == null)
                 {
-                    LogMethodExecution(nameof(Get), startTime, endTime, $"Product details not found with id {id}");
-                    return NotFound($"Product details not fount with id {id}");
+                    LogMethodExecution(nameof(Get), startTime, endTime, $"Product details not found with ID: {id}");
+                    return NotFound($"Product details not found with ID: {id}");
                 }
+
                 LogMethodExecution(nameof(Get), startTime, endTime, "Success");
                 return Ok(product);
-                
+            }
+            catch (DbException dbEx)
+            {
+                // Handle database-specific exceptions
+                LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
+                return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
+                // Handle other exceptions
                 LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
-                return BadRequest(ex.Message);
+                return BadRequest("An error occurred.");
             }
         }
+
 
         [HttpPost]
         public IActionResult Post(Product model)

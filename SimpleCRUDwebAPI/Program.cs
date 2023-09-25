@@ -1,3 +1,4 @@
+using log4net.Config;
 using Microsoft.EntityFrameworkCore;
 using SimpleCRUDwebAPI.DAL;
 using System.IO;
@@ -12,10 +13,10 @@ log4net.Util.LogLog.InternalDebugging = true;
 builder.Logging.ClearProviders();
 
 // initialize log4net
-log4net.Config.XmlConfigurator.Configure(new FileInfo("log4net.config"));
+XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
 //log4net Registration added
-builder.Logging.AddLog4Net();
+//builder.Logging.AddLog4Net();
 
 // Add services to the container.
 builder.Services.AddControllers();
