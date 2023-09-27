@@ -22,6 +22,6 @@ namespace SimpleCRUDwebAPI.DAL
        
         
         public DbSet<Product> Products { get; set; }
-        public DbSet<Logger> Logger { get; set; }
+       
     }
 }
