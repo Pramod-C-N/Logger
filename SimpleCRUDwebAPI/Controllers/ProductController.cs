@@ -1,4 +1,5 @@
 ﻿using log4net;
+using LoggerService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,10 @@ namespace SimpleCRUDwebAPI.Controllers
     {
         //private readonly ILogger<ProductController> logger;
 
+        //Nlogger
+        //private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly ILoggersManager Logger;
+
         // Declare a private field for the log4net logger And  Initialize the logger for the ProductController.
         private readonly ILog logger = LogManager.GetLogger(typeof(ProductController));
 
@@ -21,10 +26,11 @@ namespace SimpleCRUDwebAPI.Controllers
         private readonly MyAppDbContext _appDbContext;
 
         
-        public ProductController(MyAppDbContext appDbContext)
+        public ProductController(MyAppDbContext appDbContext, ILoggersManager _logger)
         {
             // Assign the provided database context to the private field.
             _appDbContext = appDbContext;
+            Logger = _logger;
             
         }
 
@@ -85,22 +91,25 @@ namespace SimpleCRUDwebAPI.Controllers
 
                 if (product == null)
                 {
+                    Logger.LogWarning("No products available.");
                     LogMethodExecution(nameof(GetID), startTime, endTime, $"Product details not found with ID: {id}");
                     return NotFound($"Product details not found with ID: {id}");
                 }
-
+                Logger.LogInfo("Get method Success");
                 LogMethodExecution(nameof(GetID), startTime, endTime, "Success");
                 return Ok(product);
             }
             catch (DbException dbEx)
             {
                 // Handle database-specific exceptions
+                Logger.LogError(dbEx, $"Database Error: {dbEx.Message}");
                 LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
                 return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
                 // Handle other exceptions
+                Logger.LogError(ex, $"Error: {ex.Message}");
                 LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest("An error occurred.");
             }

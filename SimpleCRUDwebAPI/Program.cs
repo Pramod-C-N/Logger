@@ -1,46 +1,57 @@
 using log4net.Config;
+using log4net.Core;
+using LoggerService;
 using Microsoft.EntityFrameworkCore;
+using NLog;
 using SimpleCRUDwebAPI.DAL;
-using System.IO;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+//nlog
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/Nlogs.config"));
 
 // Enable internal debugging for log4net 
 log4net.Util.LogLog.InternalDebugging = true;
 
 
-//clear inbuilt logger providers
-builder.Logging.ClearProviders();
+    //clear inbuilt logger providers
+    builder.Logging.ClearProviders();
 
-// initialize log4net
-XmlConfigurator.Configure(new FileInfo("log4net.config"));
+    // initialize log4net
+    XmlConfigurator.Configure(new FileInfo("log4net.config"));
 
-//log4net Registration added
-//builder.Logging.AddLog4Net();
+    //log4net Registration added
+    //builder.Logging.AddLog4Net();
 
-// Add services to the container.
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+    // Add services to the container.
+    builder.Services.AddControllers();
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
 
-//Register Db connection string 
-builder.Services.AddDbContext<MyAppDbContext>(options => options.UseSqlServer
-(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    //Register Db connection string 
+    builder.Services.AddDbContext<MyAppDbContext>(options => options.UseSqlServer
+    (builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Register to DI container
+builder.Services.AddScoped<ILoggersManager, LoggersManager>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
 
-app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 
-app.UseAuthorization();
+    app.UseAuthorization();
 
-app.MapControllers();
+    app.MapControllers();
 
-app.Run();
+    app.Run();
