@@ -1,11 +1,10 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SimpleCRUDwebAPI.DAL;
 using SimpleCRUDwebAPI.Models;
 using System.Data.Common;
-
-[assembly:log4net.Config.XmlConfigurator(Watch = true)]
 
 namespace SimpleCRUDwebAPI.Controllers
 {
@@ -28,7 +27,7 @@ namespace SimpleCRUDwebAPI.Controllers
             _appDbContext = appDbContext;
 
             // Initialize the logger for the ProductController.
-            logger = log4net.LogManager.GetLogger(typeof(ProductController));
+            logger = LogManager.GetLogger(typeof(ProductController));
         }
 
         private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
@@ -47,48 +46,21 @@ namespace SimpleCRUDwebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            logger.Info("Get Method called");
-
             try
             {
+                var startTime = DateTime.Now;
                 var products = _appDbContext.Products.ToList();
+                var endTime = DateTime.Now;
 
                 if (products.Count == 0)
                 {
-                    logger.Warn("No products available.");
+                    LogMethodExecution(nameof(Get), startTime, endTime, "No products available.");
                     return NotFound("Products not available.");
-                }
-                logger.Info("Get Method successful.");
-                return Ok(products);               
-
-            }
-            catch (Exception ex )
-            {
-              
-                logger.Error("Error in YourMethod", ex);
-                return BadRequest(ex.Message);
-            }    
-        }
-
-
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
-        {
-            try
-            {
-                logger.Info($"This is the Get method for ID: {id}");
-                var startTime = DateTime.Now;
-                var product = _appDbContext.Products.Find(id);
-                var endTime = DateTime.Now;
-
-                if (product == null)
-                {
-                    LogMethodExecution(nameof(Get), startTime, endTime, $"Product details not found with ID: {id}");
-                    return NotFound($"Product details not found with ID: {id}");
                 }
 
                 LogMethodExecution(nameof(Get), startTime, endTime, "Success");
-                return Ok(product);
+                return Ok(products);
+
             }
             catch (DbException dbEx)
             {
@@ -104,19 +76,61 @@ namespace SimpleCRUDwebAPI.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetID(int id)
+        {
+            try
+            {
+                var startTime = DateTime.Now;
+                var product = _appDbContext.Products.Find(id);
+                var endTime = DateTime.Now;
+
+                if (product == null)
+                {
+                    LogMethodExecution(nameof(GetID), startTime, endTime, $"Product details not found with ID: {id}");
+                    return NotFound($"Product details not found with ID: {id}");
+                }
+
+                LogMethodExecution(nameof(GetID), startTime, endTime, "Success");
+                return Ok(product);
+            }
+            catch (DbException dbEx)
+            {
+                // Handle database-specific exceptions
+                LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
+                return StatusCode(500, "A database error occurred.");
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
+                return BadRequest("An error occurred.");
+            }
+        }
+
 
         [HttpPost]
         public IActionResult Post(Product model)
         {
             try
             {
+                var startTime = DateTime.Now;
                 _appDbContext.Products.Add(model);
                 _appDbContext.SaveChanges();
+                var endTime = DateTime.Now;
+                LogMethodExecution(nameof(Post), startTime, endTime, "Success");
                 return Ok("Product Created");
 
             }
+            catch (DbUpdateException dbEx)
+            {
+                // Handle database-specific exceptions
+                LogMethodExecution(nameof(Post), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
+                return StatusCode(500, "A database error occurred.");
+            }
             catch (Exception ex)
             {
+                LogMethodExecution(nameof(Post), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest(ex.Message);
             }
         }
@@ -124,55 +138,83 @@ namespace SimpleCRUDwebAPI.Controllers
         [HttpPut]
         public IActionResult Put(Product model)
         {
-            if(model == null || model.Id == 0)
+            if (model == null || model.Id == 0)
             {
-               if(model == null)
+                if (model == null)
                 {
                     return BadRequest("Model data is invalid.");
                 }
-               else if(model.Id == 0 )
+                else if (model.Id == 0)
                 {
                     return BadRequest($"Product Id {model.Id} is invalid.");
-                }            
+                }
             }
             try
             {
+                var startTime = DateTime.Now;
                 var product = _appDbContext.Products.Find(model.Id);
+                var endTime = DateTime.Now;
+
                 if (product == null)
                 {
+                    LogMethodExecution(nameof(Put), startTime, endTime, $"Product not found with id {model.Id}");
                     return NotFound($"Product not found with id {model.Id}");
                 }
+
                 product.ProductName = model.ProductName;
                 product.Price = model.Price;
                 product.Qty = model.Qty;
                 _appDbContext.SaveChanges();
+
+                LogMethodExecution(nameof(Put), startTime, endTime, "Success");
                 return Ok("Product details updated");
+            }
+            catch (DbException dbEx)
+            {
+                // Handle database-specific exceptions
+                LogMethodExecution(nameof(Put), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
+                return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
-
-                return BadRequest(ex.Message);
+                // Handle other exceptions
+                LogMethodExecution(nameof(Put), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
+                return BadRequest("An error occurred.");
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             try
             {
+                var startTime = DateTime.Now;
                 var product = _appDbContext.Products.Find(id);
+                var endTime = DateTime.Now;
+
                 if (product == null)
                 {
+                    LogMethodExecution(nameof(Delete), startTime, endTime, $"Product not found with id {id}");
                     return NotFound($"Product not found with id {id}");
                 }
+
                 _appDbContext.Remove(product);
                 _appDbContext.SaveChanges();
+
+                LogMethodExecution(nameof(Delete), startTime, endTime, "Success");
                 return Ok("Product details deleted.");
+            }
+            catch (DbException dbEx)
+            {
+                // Handle database-specific exceptions
+                LogMethodExecution(nameof(Delete), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
+                return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
-
-                return BadRequest(ex.Message);
+                // Handle other exceptions
+                LogMethodExecution(nameof(Delete), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
+                return BadRequest("An error occurred.");
             }
         }
     }
