@@ -18,6 +18,7 @@ namespace SimpleCRUDwebAPI.Controllers
         //Nlogger
         //private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly ILoggersManager Logger;
+        
 
         // Declare a private field for the log4net logger And  Initialize the logger for the ProductController.
         private readonly ILog logger = LogManager.GetLogger(typeof(ProductController));
@@ -59,10 +60,12 @@ namespace SimpleCRUDwebAPI.Controllers
                 if (products.Count == 0)
                 {
                     LogMethodExecution(nameof(Get), startTime, endTime, "No products available.");
+
                     return NotFound("Products not available.");
                 }
 
                 LogMethodExecution(nameof(Get), startTime, endTime, "Success");
+                Logger.LogInfo("Get method Success");
                 return Ok(products);
 
             }
@@ -75,6 +78,7 @@ namespace SimpleCRUDwebAPI.Controllers
             catch (Exception ex)
             {
                 // Handle other exceptions
+                Logger.LogError(ex, $"Error: {ex.Message}");
                 LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest("An error occurred.");
             }
@@ -95,7 +99,7 @@ namespace SimpleCRUDwebAPI.Controllers
                     LogMethodExecution(nameof(GetID), startTime, endTime, $"Product details not found with ID: {id}");
                     return NotFound($"Product details not found with ID: {id}");
                 }
-                Logger.LogInfo("Get method Success");
+                Logger.LogInfo("Get Id method Success");
                 LogMethodExecution(nameof(GetID), startTime, endTime, "Success");
                 return Ok(product);
             }

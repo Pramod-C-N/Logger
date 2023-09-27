@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using NLog;
 using SimpleCRUDwebAPI.DAL;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 
