@@ -14,8 +14,8 @@ namespace SimpleCRUDwebAPI.Controllers
     {
         //private readonly ILogger<ProductController> logger;
 
-        // Declare a private field for the log4net logger.
-        private readonly ILog logger;
+        // Declare a private field for the log4net logger And  Initialize the logger for the ProductController.
+        private readonly ILog logger = LogManager.GetLogger(typeof(ProductController));
 
         // Declare a private field for the application's database context.
         private readonly MyAppDbContext _appDbContext;
@@ -25,15 +25,13 @@ namespace SimpleCRUDwebAPI.Controllers
         {
             // Assign the provided database context to the private field.
             _appDbContext = appDbContext;
-
-            // Initialize the logger for the ProductController.
-            logger = LogManager.GetLogger(typeof(ProductController));
+            
         }
 
         private void LogMethodExecution(string methodName, DateTime startTime, DateTime endTime, string status)
         {
-            var logMessage = $"Method: {methodName}, Start Time: {startTime}, End Time: {endTime}, Status: {status}";
-            logger.Info(logMessage);
+            //var logMessage = $"Method: {methodName}, Start Time: {startTime}, End Time: {endTime}, Status: {status}";
+            //logger.Info(logMessage);
 
             // insert this log message into the database using log4net
             GlobalContext.Properties["MethodName"] = methodName;
