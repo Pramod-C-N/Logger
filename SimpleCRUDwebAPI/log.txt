@@ -382,3 +382,31 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP meth
 2023-09-25 11:03:56,374 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
 2023-09-25 11:04:57,014 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
 2023-09-25 11:04:57,072 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-25 11:19:42,042 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - This is the Get method for ID: 2
+2023-09-25 11:19:43,783 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 25-09-2023 11:19:42, End Time: 25-09-2023 11:19:43, Status: Success
+2023-09-25 11:19:43,786 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:19:50,287 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-25 11:19:50,347 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-25 11:20:49,823 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - This is the Get method for ID: 1
+2023-09-25 11:20:51,472 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 25-09-2023 11:20:50, End Time: 25-09-2023 11:20:51, Status: Success
+2023-09-25 11:20:51,475 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:21:38,304 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - This is the Get method for ID: 7
+2023-09-25 11:21:38,364 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 25-09-2023 11:21:38, End Time: 25-09-2023 11:21:38, Status: Product details not found with ID: 7
+2023-09-25 11:21:38,366 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:23:09,450 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 25-09-2023 11:23:07, End Time: 25-09-2023 11:23:09, Status: Success
+2023-09-25 11:23:09,554 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:23:51,798 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 25-09-2023 11:23:50, End Time: 25-09-2023 11:23:51, Status: Success
+2023-09-25 11:23:51,895 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:25:20,967 [12] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 25-09-2023 11:25:12, End Time: 25-09-2023 11:25:14, Status: Success
+2023-09-25 11:25:21,059 [12] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-25 11:27:41,105 [14] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-25 11:27:42,579 [14] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-27 10:42:40,883 [9] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Delete, Start Time: 27-09-2023 10:42:38, End Time: 27-09-2023 10:42:40, Status: Success
+2023-09-27 10:42:41,069 [9] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-09-27 10:43:58,241 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-27 10:43:59,679 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-27 10:44:51,900 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Post, Start Time: 27-09-2023 10:44:51, End Time: 27-09-2023 10:44:51, Status: Success
+2023-09-27 10:49:03,698 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method called
+2023-09-27 10:49:05,196 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Get Method successful.
+2023-09-27 10:51:39,516 [8] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 27-09-2023 10:51:38, End Time: 27-09-2023 10:51:39, Status: Success
+2023-09-27 10:51:39,663 [8] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
