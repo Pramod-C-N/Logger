@@ -1,5 +1,6 @@
 ﻿using log4net;
 using LoggerService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -47,7 +48,7 @@ namespace SimpleCRUDwebAPI.Controllers
             GlobalContext.Properties["Status"] = status;
             logger.Info("Log this message in the database");
         }
-
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -119,7 +120,7 @@ namespace SimpleCRUDwebAPI.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPost]
         public IActionResult Post(Product model)
         {

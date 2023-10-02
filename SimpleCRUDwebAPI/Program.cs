@@ -4,8 +4,28 @@ using LoggerService;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using SimpleCRUDwebAPI.DAL;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(option => 
+    {
+        option.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+
+        };
+
+    });
 
 
 //nlog
@@ -48,7 +68,8 @@ var app = builder.Build();
     }
 
     app.UseHttpsRedirection();
-
+//authentication add
+app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllers();
