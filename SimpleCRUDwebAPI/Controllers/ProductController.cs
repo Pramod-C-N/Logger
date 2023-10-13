@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using SimpleCRUDwebAPI.DAL;
 using SimpleCRUDwebAPI.Models;
 using System.Data.Common;
+using System.Reflection;
 
 namespace SimpleCRUDwebAPI.Controllers
 {
@@ -48,7 +49,7 @@ namespace SimpleCRUDwebAPI.Controllers
             GlobalContext.Properties["Status"] = status;
             logger.Info("Log this message in the database");
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -61,11 +62,13 @@ namespace SimpleCRUDwebAPI.Controllers
                 if (products.Count == 0)
                 {
                     LogMethodExecution(nameof(Get), startTime, endTime, "No products available.");
+                    logger.Info($"Method: {"Get"}, Start Time: {startTime}, End Time: {endTime}, Status: {"fail"}");
 
                     return NotFound("Products not available.");
                 }
 
                 LogMethodExecution(nameof(Get), startTime, endTime, "Success");
+                logger.Info($"Method: {"Get"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 Logger.LogInfo("Get method Success");
                 return Ok(products);
 
@@ -73,13 +76,16 @@ namespace SimpleCRUDwebAPI.Controllers
             catch (DbException dbEx)
             {
                 // Handle database-specific exceptions
+                logger.Info($"Method: {"Get"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
                 return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
                 // Handle other exceptions
-                Logger.LogError(ex, $"Error: {ex.Message}");
+                logger.Info($"Method: {"Get"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
+
+               Logger.LogError(ex, $"Error: {ex.Message}");
                 LogMethodExecution(nameof(Get), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest("An error occurred.");
             }
@@ -88,6 +94,7 @@ namespace SimpleCRUDwebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetID(int id)
         {
+           
             try
             {
                 var startTime = DateTime.Now;
@@ -101,11 +108,13 @@ namespace SimpleCRUDwebAPI.Controllers
                     return NotFound($"Product details not found with ID: {id}");
                 }
                 Logger.LogInfo("Get Id method Success");
+                logger.Info($"Method: {"GetID"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 LogMethodExecution(nameof(GetID), startTime, endTime, "Success");
                 return Ok(product);
             }
             catch (DbException dbEx)
             {
+                logger.Info($"Method: {"GetID"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle database-specific exceptions
                 Logger.LogError(dbEx, $"Database Error: {dbEx.Message}");
                 LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
@@ -113,6 +122,7 @@ namespace SimpleCRUDwebAPI.Controllers
             }
             catch (Exception ex)
             {
+                logger.Info($"Method: {"GetID"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle other exceptions
                 Logger.LogError(ex, $"Error: {ex.Message}");
                 LogMethodExecution(nameof(GetID), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
@@ -120,7 +130,7 @@ namespace SimpleCRUDwebAPI.Controllers
             }
         }
 
-        [Authorize]
+       // [Authorize]
         [HttpPost]
         public IActionResult Post(Product model)
         {
@@ -130,18 +140,21 @@ namespace SimpleCRUDwebAPI.Controllers
                 _appDbContext.Products.Add(model);
                 _appDbContext.SaveChanges();
                 var endTime = DateTime.Now;
+                logger.Info($"Method: {"Post"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 LogMethodExecution(nameof(Post), startTime, endTime, "Success");
                 return Ok("Product Created");
 
             }
             catch (DbUpdateException dbEx)
             {
+                logger.Info($"Method: {"Post"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle database-specific exceptions
                 LogMethodExecution(nameof(Post), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
                 return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
+                logger.Info($"Method: {"Post"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 LogMethodExecution(nameof(Post), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest(ex.Message);
             }
@@ -170,6 +183,7 @@ namespace SimpleCRUDwebAPI.Controllers
                 if (product == null)
                 {
                     LogMethodExecution(nameof(Put), startTime, endTime, $"Product not found with id {model.Id}");
+                    logger.Info($"Method: {"Put"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Fail"}");
                     return NotFound($"Product not found with id {model.Id}");
                 }
 
@@ -177,18 +191,20 @@ namespace SimpleCRUDwebAPI.Controllers
                 product.Price = model.Price;
                 product.Qty = model.Qty;
                 _appDbContext.SaveChanges();
-
+                logger.Info($"Method: {"Put"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 LogMethodExecution(nameof(Put), startTime, endTime, "Success");
                 return Ok("Product details updated");
             }
             catch (DbException dbEx)
             {
+                logger.Info($"Method: {"Put"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle database-specific exceptions
                 LogMethodExecution(nameof(Put), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
                 return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
+                logger.Info($"Method: {"Put"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle other exceptions
                 LogMethodExecution(nameof(Put), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest("An error occurred.");
@@ -206,6 +222,7 @@ namespace SimpleCRUDwebAPI.Controllers
 
                 if (product == null)
                 {
+                    logger.Info($"Method: {"Delete"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Fail"}");
                     LogMethodExecution(nameof(Delete), startTime, endTime, $"Product not found with id {id}");
                     return NotFound($"Product not found with id {id}");
                 }
@@ -213,17 +230,20 @@ namespace SimpleCRUDwebAPI.Controllers
                 _appDbContext.Remove(product);
                 _appDbContext.SaveChanges();
 
+                logger.Info($"Method: {"Delete"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 LogMethodExecution(nameof(Delete), startTime, endTime, "Success");
                 return Ok("Product details deleted.");
             }
             catch (DbException dbEx)
             {
+                logger.Info($"Method: {"Delete"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle database-specific exceptions
                 LogMethodExecution(nameof(Delete), DateTime.Now, DateTime.Now, $"Database Error: {dbEx.Message}");
                 return StatusCode(500, "A database error occurred.");
             }
             catch (Exception ex)
             {
+                logger.Info($"Method: {"Delete"}, Start Time: {DateTime.Now}, End Time: {DateTime.Now}, Status: {"fail"}");
                 // Handle other exceptions
                 LogMethodExecution(nameof(Delete), DateTime.Now, DateTime.Now, $"Error: {ex.Message}");
                 return BadRequest("An error occurred.");

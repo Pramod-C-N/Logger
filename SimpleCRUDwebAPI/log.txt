@@ -460,3 +460,15 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP meth
 2023-09-28 17:13:09,913 [18] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
 2023-10-02 23:59:18,560 [36] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
 2023-10-02 23:59:42,307 [36] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:32:18,148 [18] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:32:24,001 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:34:12,802 [12] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:34:14,226 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:37:27,019 [8] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:39:36,896 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:40:01,900 [22] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:40:09,900 [26] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:41:26,529 [18] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:41:45,871 [28] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:46:54,794 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-13 10:49:50,493 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using SimpleCRUDwebAPI.DAL;
 using SimpleCRUDwebAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
@@ -13,22 +14,41 @@ namespace SimpleCRUDwebAPI.Controllers
     public class LoginController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public LoginController(IConfiguration configuration)
-        {
 
+        private readonly MyAppDbContext _appDbContext;
+        public LoginController(MyAppDbContext appDbContext,IConfiguration configuration)
+        {
+            _appDbContext = appDbContext;
             _configuration = configuration;
 
         }
 
+
         private Users AuthenticateUser(Users user)
         {
             Users _user = null;
-            if (user.Username == "admin" && user.Password=="12345")
-            {   
-                _user= new Users { Username = "Pramod"};
+
+           
+            var dbUser = _appDbContext.Users.FirstOrDefault(u => u.Username == user.Username);
+
+            if (dbUser != null && dbUser.Password == user.Password)
+            {
+                // Username exists in the database and passwords match
+                _user = new Users { Username = dbUser.Username };
             }
+
             return _user;
         }
+
+        //private Users AuthenticateUser(Users user)
+        //{
+        //    Users _user = null;
+        //    if (user.Username == "admin" && user.Password=="12345")
+        //    {   
+        //        _user= new Users { Username = "Pramod"};
+        //    }
+        //    return _user;
+        //}
 
         private string GenerateToken(Users users)
         {
