@@ -183,7 +183,7 @@ namespace SimpleCRUDwebAPI.Controllers
                 if (product == null)
                 {
                     LogMethodExecution(nameof(Put), startTime, endTime, $"Product not found with id {model.Id}");
-                    logger.Info($"Method: {"Put"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Fail"}");
+                    logger.Info($"Method: {"Get"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Fail"}");
                     return NotFound($"Product not found with id {model.Id}");
                 }
 
@@ -191,7 +191,7 @@ namespace SimpleCRUDwebAPI.Controllers
                 product.Price = model.Price;
                 product.Qty = model.Qty;
                 _appDbContext.SaveChanges();
-                logger.Info($"Method: {"Put"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
+                logger.Info($"Method: {"Get"}, Start Time: {startTime}, End Time: {endTime}, Status: {"Sucess"}");
                 LogMethodExecution(nameof(Put), startTime, endTime, "Success");
                 return Ok("Product details updated");
             }

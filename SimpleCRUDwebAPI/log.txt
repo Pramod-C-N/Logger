@@ -478,3 +478,42 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP meth
 2023-10-15 19:49:18,622 [5] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 15-10-2023 19:49:17, End Time: 15-10-2023 19:49:18, Status: Sucess
 2023-10-15 19:52:05,192 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
 2023-10-15 19:52:05,335 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 15-10-2023 19:52:03, End Time: 15-10-2023 19:52:05, Status: Sucess
+2023-10-15 20:17:24,439 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-15 20:17:24,581 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 15-10-2023 20:17:23, End Time: 15-10-2023 20:17:24, Status: Sucess
+2023-10-17 12:09:00,775 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:09:00,980 [17] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:08:59, End Time: 17-10-2023 12:09:00, Status: Sucess
+2023-10-17 12:12:51,925 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:12:52,069 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:12:50, End Time: 17-10-2023 12:12:51, Status: Sucess
+2023-10-17 12:14:37,654 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:14:37,795 [16] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:14:36, End Time: 17-10-2023 12:14:37, Status: Sucess
+2023-10-17 12:31:36,621 [18] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:31:36,780 [18] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:31:34, End Time: 17-10-2023 12:31:36, Status: Sucess
+2023-10-17 12:31:53,294 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:31:53,297 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:31:53, End Time: 17-10-2023 12:31:53, Status: Sucess
+2023-10-17 12:36:50,022 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:36:50,173 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:36:48, End Time: 17-10-2023 12:36:50, Status: Sucess
+2023-10-17 12:38:19,105 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:38:19,243 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:38:17, End Time: 17-10-2023 12:38:19, Status: Sucess
+2023-10-17 12:38:27,490 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:38:27,492 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:38:27, End Time: 17-10-2023 12:38:27, Status: Sucess
+2023-10-17 12:40:28,092 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 17-10-2023 12:40:26, End Time: 17-10-2023 12:40:28, Status: Sucess
+2023-10-17 12:40:28,186 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:45:12,529 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:45:12,664 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:45:11, End Time: 17-10-2023 12:45:12, Status: Sucess
+2023-10-17 12:47:37,969 [5] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: GetID, Start Time: 17-10-2023 12:47:36, End Time: 17-10-2023 12:47:37, Status: Sucess
+2023-10-17 12:47:38,066 [5] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:47:42,508 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:47:42,511 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:47:42, End Time: 17-10-2023 12:47:42, Status: Sucess
+2023-10-17 12:48:38,072 [14] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 12:48:38,207 [14] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 12:48:36, End Time: 17-10-2023 12:48:38, Status: Sucess
+2023-10-17 13:18:48,494 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 13:18:48,697 [15] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 13:18:47, End Time: 17-10-2023 13:18:48, Status: Sucess
+2023-10-17 13:23:31,836 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 13:23:31,980 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 13:23:30, End Time: 17-10-2023 13:23:31, Status: Sucess
+2023-10-17 13:27:48,527 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 13:27:48,668 [3] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 13:27:47, End Time: 17-10-2023 13:27:48, Status: Sucess
+2023-10-17 13:31:10,320 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 13:31:10,455 [11] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 13:31:09, End Time: 17-10-2023 13:31:10, Status: Sucess
+2023-10-17 13:32:59,266 [12] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database
+2023-10-17 13:32:59,454 [12] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Method: Get, Start Time: 17-10-2023 13:32:57, End Time: 17-10-2023 13:32:59, Status: Sucess
+2023-10-17 13:33:43,842 [13] INFO  SimpleCRUDwebAPI.Controllers.ProductController - Log this message in the database

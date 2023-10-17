@@ -29,7 +29,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 //nlog
-LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/Nlogs.config"));
+LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/Nlogs.config"));
 
 // Enable internal debugging for log4net 
 log4net.Util.LogLog.InternalDebugging = true;
